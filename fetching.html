@@ -54,7 +54,7 @@
         <tr>
             <td scope="row" id="resultcar"> </td>
         <td  scope="row" id="resultmodel"> </td>
-        <td  scope="row" id="resultcolor"> </td>
+        <td  scope="row"   id="resultcolor"> </td>
         </tr>
        
 </table>
@@ -62,7 +62,12 @@
 </div>
 </div>
 <script>
-    
+    var honda={
+      
+        model:"2007"
+
+    }
+    // alert(honda.model)
     function carname(){
     let Carname = document.getElementById("carname").value;    
     var Hondamodel = [
@@ -94,35 +99,35 @@ function carmodel(){
     let Carmodel = document.getElementById("carmodel").value;
      
      var civicModel2019 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='Red'>"  + "Red" +"</option>",
-     "<option  scope='row' value='blue'>"  + "blue" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: red;' value='Red'>"  + "Red" +"</option>",
+     "<option  scope='row'  style='background: blue;' value='blue'>"  + "blue" +"</option>",
      ];
      var civicModel2018 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='white'>"  + "white" +"</option>",
-     "<option  scope='row' value='Yellow'>"  + "Yellow" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: gray;' value='gray'>"  + "white" +"</option>",
+     "<option  scope='row'  style='background: Yellow;' value='Yellow'>"  + "Yellow" +"</option>",
      ];
      var civicModel2017 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='sky_Blue'>"  + "sky Blue" +"</option>",
-     "<option  scope='row' value='Dark_Bule'>"  + "Dark Bule" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: skyblue;' value='sky_Blue'>"  + "sky Blue" +"</option>",
+     "<option  scope='row'  style='background: darkblue;' value='Dark_Bule'>"  + "Dark Bule" +"</option>",
      ];
     
      var HondaModel2019 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='Purple'>"  + "Purple" +"</option>",
-     "<option  scope='row' value='pink'>"  + "pink" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: Purple;' value='Purple'>"  + "Purple" +"</option>",
+     "<option  scope='row'  style='background: pink;' value='pink'>"  + "pink" +"</option>",
      ];
      var HondaModel2018 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='Black'>"  + "Black" +"</option>",
-     "<option  scope='row' value='Yellow'>"  + "Yellow" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: Black;' value='Black'>"  + "Black" +"</option>",
+     "<option  scope='row'  style='background: Yellow;' value='Yellow'>"  + "Yellow" +"</option>",
      ];
      var HondaModel2017 = [
-     "<option  scope='row' value='Select'>"  + "Select Color" +"</option>",
-     "<option  scope='row' value='Brown'>"  + "Brown" +"</option>",
-     "<option  scope='row' value=' Silver'>"  + "Silver" +"</option>",
+     "<option  scope='row'   value='Select'>"  + "Select Color" +"</option>",
+     "<option  scope='row'  style='background: Brown;' value='Brown'>"  + "Brown" +"</option>",
+     "<option  scope='row'  style='background: Silver;' value=' Silver'>"  + "Silver" +"</option>",
      ];
     //  if (Carmodel=="civic_Model_2019" ){
     //     var CarColor1 = document.getElementById("carcolor").innerHTML = civicModel2019;
@@ -145,10 +150,14 @@ function  carcolor(){
 let CarName = document.getElementById('carname').value;
 let CarColor = document.getElementById('carcolor').value;
 let CarModel = document.getElementById('carmodel').value;
+for( var a=CarColor ; a>CarColor ; a++){
 
+    
+}
+
+let resultcolor = document.getElementById('resultcolor').innerHTML = "<td id='resultcolor'>" + a + "</td>" ; 
 let Resultcar = document.getElementById('resultcar').innerHTML = "<td id='resultcar'>" + CarName + "</td>" ; 
 let Resultmodel = document.getElementById('resultmodel').innerHTML =  "<td id='resultmodel'>" + CarModel + "</td>" ; 
-let Resultcolor = document.getElementById('resultcolor').innerHTML = "<td id='resultcolor'>" + CarColor + "</td>" ; 
 
 
 
