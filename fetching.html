@@ -51,9 +51,9 @@
         </tr>
     
         <tr>
-            <td > Honda</td>
-        <td id="resultmodel"> Model 2019</td>
-        <td id="resultname"> red</td>
+            <td id="resultcar"> </td>
+        <td id="resultmodel"> </td>
+        <td id="resultcolor"> </td>
         </tr>
     
 </table>
@@ -143,7 +143,13 @@ function  carcolor(){
 let CarName = document.getElementById('carname').value;
 let CarColor = document.getElementById('carcolor').value;
 let CarModel = document.getElementById('carmodel').value;
-let loaddata = 
+
+let Resultcar = document.getElementById('resultcar').innerHTML = "<td id='resultcar'>" + CarName + "</td>" ; 
+let Resultmodel = document.getElementById('resultmodel').innerHTML =  "<td id='resultmodel'>" + CarModel + "</td>" ; 
+let Resultcolor = document.getElementById('resultcolor').innerHTML = "<td id='resultcolor'>" + CarColor + "</td>" ; 
+
+
+
 }
 </script>
 </body>
