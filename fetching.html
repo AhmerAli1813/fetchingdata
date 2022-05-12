@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .opt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+<div class="opt">
+
+    <select name=""  onchange="carname()"  id="carname">
+        <option value="">select Car Name</option>
+        <option value="honda">Honda</option>
+        <option value="civic" ><span ></span> civic</option>
+    </select>
+    <select name=""  onchange="carmodel()" id="carmodel">
+        
+    </select>
+    <select name=""  onchange="carcolor()" id="carcolor">
+        
+    </select>
+</div>
+<div id="loaddata">
+<table border="1">
+    
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th> Color</th>
+        </tr>
+    
+        <tr>
+            <td > Honda</td>
+        <td id="resultmodel"> Model 2019</td>
+        <td id="resultname"> red</td>
+        </tr>
+    
+</table>
+
+</div>
+</div>
+<script>
+    function carname(){
+    let Carname = document.getElementById("carname").value;    
+    var Hondamodel = [
+    "<option value='select'>" + "select Models" +"</option>",   
+        "<option value='Honda_Model_2019'>" + "Honda Modle 2019" +"</option>",
+        "<option value='Honda_Model_2018'>" + "Honda Modle 2018" +"</option>",
+        "<option value='Honda_Model_2017'>" + "Honda Modle 2017" +"</option>",
+        
+    ];
+    
+    var Civicmodel = [
+    "<option value='select'>" + "select Models" +"</option>",    
+    "<option value='civic_Model_2019'>" + "civic Modle 2019" +"</option>",
+        "<option value='civic_Model_2018'>" + "civic Modle 2018" +"</option>",
+        "<option value='civic_Model_2017'>" + "civic Modle 2017" +"</option>",
+        
+    ];
+    
+    if(Carname=="honda"){
+         
+        var CarModel = document.getElementById("carmodel").innerHTML = Hondamodel ;
+    }else if(Carname=="civic"){
+        var CarModel = document.getElementById("carmodel").innerHTML = Civicmodel ;
+    }
+
+};
+
+function carmodel(){
+    let Carmodel = document.getElementById("carmodel").value;
+     
+     var civicModel2019 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='Red'>"  + "Red" +"</option>",
+     "<option value='blue'>"  + "blue" +"</option>",
+     ];
+     var civicModel2018 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='white'>"  + "white" +"</option>",
+     "<option value='Yellow'>"  + "Yellow" +"</option>",
+     ];
+     var civicModel2017 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='sky_Blue'>"  + "sky Blue" +"</option>",
+     "<option value='Dark_Bule'>"  + "Dark Bule" +"</option>",
+     ];
+    
+     var HondaModel2019 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='Purple'>"  + "Purple" +"</option>",
+     "<option value='pink'>"  + "pink" +"</option>",
+     ];
+     var HondaModel2018 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='Black'>"  + "Black" +"</option>",
+     "<option value='Yellow'>"  + "Yellow" +"</option>",
+     ];
+     var HondaModel2017 = [
+     "<option value='Select'>"  + "Select Color" +"</option>",
+     "<option value='Brown'>"  + "Brown" +"</option>",
+     "<option value=' Silver'>"  + "Silver" +"</option>",
+     ];
+    //  if (Carmodel=="civic_Model_2019" ){
+    //     var CarColor1 = document.getElementById("carcolor").innerHTML = civicModel2019;
+    //  }else{
+    //      alert('msg');
+    //  }
+    
+     switch (Carmodel){
+        case 'civic_Model_2019':  var CarColor1 = document.getElementById("carcolor").innerHTML = civicModel2019; break; 
+        case 'civic_Model_2018':  var CarColor1 = document.getElementById("carcolor").innerHTML = civicModel2018; break; 
+        case 'civic_Model_2017':  var CarColor1 = document.getElementById("carcolor").innerHTML = civicModel2017; break; 
+        case 'Honda_Model_2019':  var CarColor1 = document.getElementById("carcolor").innerHTML = HondaModel2019; break; 
+        case 'Honda_Model_2018':  var CarColor1 = document.getElementById("carcolor").innerHTML = HondaModel2018; break; 
+        case 'Honda_Model_2017':  var CarColor1 = document.getElementById("carcolor").innerHTML = HondaModel2017; break; 
+    default: "Please select Option";
+    }
+};
+
+function  carcolor(){
+let CarName = document.getElementById('carname').value;
+let CarColor = document.getElementById('carcolor').value;
+let CarModel = document.getElementById('carmodel').value;
+let loaddata = 
+}
+</script>
+</body>
+</html>
